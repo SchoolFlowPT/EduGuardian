@@ -1,0 +1,10 @@
+{
+    "accessingTxt": "Está a aceder ao serviço:",
+    "usernamePl": "Utilizador",
+    "passwordPl": "Password",
+    "authBtn": "Autenticar",
+    "recoverBtn": "Recuperar password",
+    "cmdCCAuth": "CMD / C.Cidadão",
+    "processingTxt": "A Carregar...",
+    "serverError": "Ocorreu um erro de comunicação com o servidor!"
+}

@@ -1,0 +1,10 @@
+{
+    "accessingTxt": "You are accessing the service:",
+    "usernamePl": "Username",
+    "passwordPl": "Password",
+    "authBtn": "Authenticate",
+    "recoverBtn": "Recover password",
+    "cmdCCAuth": "CMD / C.Citizen",
+    "processingTxt": "Loading...",
+    "serverError": "There was a communication error with the server!"
+}
