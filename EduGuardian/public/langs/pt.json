@@ -6,5 +6,11 @@
     "recoverBtn": "Recuperar password",
     "cmdCCAuth": "CMD / C.Cidadão",
     "processingTxt": "A Carregar...",
-    "serverError": "Ocorreu um erro de comunicação com o servidor!"
+    "serverError": "Ocorreu um erro de comunicação com o servidor!",
+    "bad-parameters": "O Cliente OAuth não enviou dados válidos!",
+    "oauth-not-found": "O Cliente OAuth não foi encontrado!",
+    "domain-not-allowed": "O Dominio de redirecionamento não é confiavel!",
+    "scopes-not-allowed": "Um ou mais escopos pedidos não estão autorizados!",
+    "not-secure-redirect": "O Endereço de redirecionamento precisa de ser HTTPS!",
+    "pageTitle": "Serviço de Autenticação"
 }

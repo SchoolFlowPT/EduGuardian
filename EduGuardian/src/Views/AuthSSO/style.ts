@@ -6,7 +6,7 @@ interface ContainerBox {
 }
 
 export const Container = styled.div`
-    background: ${(props: ContainerBox) => props.bgPath !== "notLoaded" ? "url(" + BACKEND_URL + "static/" + props.bgPath + ")" : "#0099cb"};
+    background: ${(props: ContainerBox) => props.bgPath !== "notLoaded" ? "url(" + BACKEND_URL + "static/" + props.bgPath + ")" : "#ccc"};
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;

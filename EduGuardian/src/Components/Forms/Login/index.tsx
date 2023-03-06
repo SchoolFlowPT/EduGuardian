@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { useLangs } from "../../../Contexts/Langs";
+import { InitialConfig } from "../../../Types/Models";
 
 import {
     BoxServiceName,
@@ -18,7 +19,11 @@ import {
 import { FaUserAlt } from "react-icons/fa";
 import { GoKey } from "react-icons/go";
 
-export default function Login(){
+interface FormPreData {
+    preData: InitialConfig;
+}
+
+export default function Login(props: FormPreData){
 
     const { langs } = useLangs();
 
@@ -26,7 +31,7 @@ export default function Login(){
         <Fragment>
             <BoxServiceName>
                 <TxtMainTxt>{langs.accessingTxt}</TxtMainTxt>
-                <TxtServiceName>Conecta</TxtServiceName>
+                <TxtServiceName>{props.preData.oauthName}</TxtServiceName>
             </BoxServiceName>
             <LoginForm method="post">
                 <LineLogin>
@@ -50,7 +55,7 @@ export default function Login(){
             </BtnBox>
             <LineBoxs>
                 <LinkHelper href="#">{langs.recoverBtn}</LinkHelper>
-                <LinkHelper href="#">v1.0</LinkHelper>
+                <LinkHelper href="#">{props.preData.appVersion}</LinkHelper>
             </LineBoxs>
         </Fragment>
     );

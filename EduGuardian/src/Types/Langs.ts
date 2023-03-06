@@ -7,6 +7,12 @@ export interface LangsProps {
     "cmdCCAuth": string;
     "processingTxt": string;
     "serverError": string;
+    "bad-parameters": string;
+    "oauth-not-found": string;
+    "domain-not-allowed": string;
+    "scopes-not-allowed": string;
+    "not-secure-redirect": string;
+    "pageTitle": string;
 }
 
 export interface FlagsProps {

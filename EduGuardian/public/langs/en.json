@@ -6,5 +6,11 @@
     "recoverBtn": "Recover password",
     "cmdCCAuth": "CMD / C.Citizen",
     "processingTxt": "Loading...",
-    "serverError": "There was a communication error with the server!"
+    "serverError": "There was a communication error with the server!",
+    "bad-parameters": "OAuth Client did not send valid data!",
+    "oauth-not-found": "OAuth Client not found!",
+    "domain-not-allowed": "The redirection domain is not reliable!",
+    "scopes-not-allowed": "One or more requested scopes are not authorized!",
+    "not-secure-redirect": "The Redirect Address needs to be HTTPS!",
+    "pageTitle": "Authentication Service"
 }
