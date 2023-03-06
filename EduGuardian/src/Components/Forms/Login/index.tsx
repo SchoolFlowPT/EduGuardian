@@ -55,7 +55,7 @@ export default function Login(props: FormPreData){
             </BtnBox>
             <LineBoxs>
                 <LinkHelper href="#">{langs.recoverBtn}</LinkHelper>
-                <LinkHelper href="#">{props.preData.appVersion}</LinkHelper>
+                <LinkHelper href="https://github.com/SchoolFlowPT" target="_blank">{props.preData.appVersion}</LinkHelper>
             </LineBoxs>
         </Fragment>
     );

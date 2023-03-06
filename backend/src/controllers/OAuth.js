@@ -8,16 +8,9 @@ export async function getInitialConfig(req, res){
         }
     });
     const images = imagesBD.map(imageData => imageData.uri);
-    const entity = await prisma.entityConfig.findFirst({
-        select: {
-            name: true,
-            smallName: true
-        }
-    });
     if(req.query.clientId === "null" || req.query.redirectUri === "null" || req.query.scopes === "null"){
         return res.status(400).json({
             images,
-            entity,
             appVersion: "v1.0",
             error: "bad-parameters"
         });
@@ -26,7 +19,6 @@ export async function getInitialConfig(req, res){
     if(protocol !== "https:"){
         return res.status(400).json({
             images,
-            entity,
             appVersion: "v1.0",
             error: "not-secure-redirect"
         });
@@ -52,7 +44,6 @@ export async function getInitialConfig(req, res){
     if(!oauthClient){
         return res.status(401).json({
             images,
-            entity,
             appVersion: "v1.0",
             error: "oauth-not-found"
         });
@@ -60,7 +51,6 @@ export async function getInitialConfig(req, res){
     if(oauthClient.AllowedHosts.findIndex((allowHost) => { return (allowHost.host === hostname); }) === -1){
         return res.status(401).json({
             images,
-            entity,
             appVersion: "v1.0",
             error: "domain-not-allowed"
         });
@@ -72,14 +62,12 @@ export async function getInitialConfig(req, res){
     if(!allScopesAllowed){
         return res.status(401).json({
             images,
-            entity,
             appVersion: "v1.0",
             error: "scopes-not-allowed"
         });
     }
     res.status(200).json({
         images,
-        entity,
         appVersion: "v1.0",
         oauthName: oauthClient.name
     });
